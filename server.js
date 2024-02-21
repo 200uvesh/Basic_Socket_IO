@@ -1,3 +1,4 @@
+// imports:-
 require("dotenv").config()
 const  express = require("express")
 const path = require("path")
@@ -7,10 +8,12 @@ const http = require("http")
 const server =  http.createServer(app)
 const io = socketIO(server)
  
+ 
 
 
 
  
+//Routes:- 
 
  app.get('/' ,(req  , res)=>{
     res.sendFile(path.join(__dirname , 'index.html'))
@@ -24,10 +27,10 @@ const io = socketIO(server)
 
 
  
-
-
- // Listners
+ // Listners:-
  const PORT = process.env.PORT
  server.listen(PORT , ()=>{
     console.log(` Server is Started at http://localhost:${PORT}`)
  })
+
+ 
